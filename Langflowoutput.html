@@ -1,0 +1,89 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Story Review – Ahc Reports Reports Ahc</title>
+    <style>
+        body {font-family: Arial, sans-serif; margin: 20px; line-height: 1.5;}
+        h1 {color: #2E3A59;}
+        table {border-collapse: collapse; width: 100%; max-width: 800px;}
+        th, td {border: 1px solid #ccc; padding: 8px; text-align: left;}
+        th {background-color: #f2f2f2;}
+        .score {font-weight: bold; color: #2E3A59;}
+        .overall {font-size: 1.2em; margin-top: 20px;}
+        .improvements {margin-top: 20px;}
+        .improvements li {margin-bottom: 8px;}
+    </style>
+</head>
+<body>
+
+<h1>User Story Review – “Ahc Reports Reports Ahc”</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>Description / Findings</th>
+            <th>Score (out of 20)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Clarity</td>
+            <td>
+                The wording is vague (“ahc reports reports ahc”) and does not identify who the actor is, what the exact action is, or the expected outcome. The story is difficult to understand without additional context.
+            </td>
+            <td class="score">5 / 20</td>
+        </tr>
+        <tr>
+            <td>Completeness</td>
+            <td>
+                No acceptance criteria, pre‑conditions, or definition of “related functionality”. Critical details (data sources, security constraints, reporting format) are missing.
+            </td>
+            <td class="score">2 / 20</td>
+        </tr>
+        <tr>
+            <td>Business Value Alignment</td>
+            <td>
+                The story does not articulate a concrete healthcare benefit (e.g., patient safety, compliance, operational efficiency). It is impossible to map it to any strategic objective.
+            </td>
+            <td class="score">4 / 20</td>
+        </tr>
+        <tr>
+            <td>Testability</td>
+            <td>
+                Without clear acceptance criteria or measurable outcomes, QA cannot derive test cases. The story lacks “given/when/then” scenarios.
+            </td>
+            <td class="score">3 / 20</td>
+        </tr>
+        <tr>
+            <td>Technical Feasibility</td>
+            <td>
+                The story provides no information about system boundaries, integration points (e.g., HL7, FHIR), data volume, or performance expectations, making feasibility assessment speculative.
+            </td>
+            <td class="score">5 / 20</td>
+        </tr>
+    </tbody>
+</table>
+
+<p class="overall"><strong>Overall Score: 19 / 100</strong></p>
+
+<h2>Improvement Recommendations</h2>
+<ul class="improvements">
+    <li><strong>Clarity:</strong> Rewrite the story using the standard “As a <em>[role]</em>, I want to <em>[action]</em> so that <em>[benefit]</em>” format. Identify the specific user (e.g., Clinical Analyst, Reporting Manager) and the exact report(s) to be generated.</li>
+    <li><strong>Completeness:</strong> Add explicit acceptance criteria. Example:
+        <ul>
+            <li>Given the user is authenticated and has the “Report Viewer” role, when they request the “AHC Monthly Summary”, then the system returns a PDF with data filtered by the selected date range.</li>
+            <li>All data must be masked according to HIPAA/POPIA rules.</li>
+        </ul>
+        Include pre‑conditions (e.g., data must be loaded nightly) and post‑conditions (e.g., audit log entry created).</li>
+    <li><strong>Business Value Alignment:</strong> State the concrete value: e.g., “Enable the compliance team to monitor adverse event trends, reducing audit findings by 15%.” Tie the story to a measurable KPI.</li>
+    <li><strong>Testability:</strong> Derive test cases from the acceptance criteria. Include functional tests (correct data, format), security tests (role‑based access), and performance tests (report generation < 5 seconds for 10 k records).</li>
+    <li><strong>Technical Feasibility:</strong> Clarify integration points (e.g., pull data from the EHR via FHIR Observation resources), expected data volume, and any regulatory constraints (encryption at rest, audit logging). Confirm that the existing reporting engine can support the required output format.</li>
+</ul>
+
+<p>Once the story is rewritten with the above details, it will become a solid, testable backlog item that aligns with healthcare regulatory standards and delivers clear business value.</p>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Message</title>
+</head>
+<body>
+    <p>```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Story Review – Ahc Reports</title>
+    <style>
+        body {font-family: Arial, sans-serif; margin: 20px; line-height: 1.5;}
+        h1, h2 {color: #2F4F4F;}
+        table {border-collapse: collapse; width: 100%; max-width: 800px;}
+        th, td {border: 1px solid #ccc; padding: 8px; text-align: left;}
+        th {background-color: #f2f2f2;}
+        .score {font-weight: bold; color: #006400;}
+        .low {color: #B22222;}
+        .improvement {margin-top: 20px;}
+        ul {margin-top: 5px;}
+    </style>
+</head>
+<body>
+
+<h1>User Story Review – “Ahc Reports Reports Ahc”</h1>
+
+<h2>Scoring Summary</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>Description / Findings</th>
+            <th>Score (out of 20)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Clarity</td>
+            <td>
+                The wording “ahc reports reports ahc” does not convey any concrete functionality.  
+                No actors, actions, or outcomes are described in a way that a stakeholder can visualize.  
+                <span class="low">Result: highly ambiguous.</span>
+            </td>
+            <td class="score">4 / 20</td>
+        </tr>
+        <tr>
+            <td>Completeness</td>
+            <td>
+                Acceptance criteria are missing entirely.  
+                Preconditions, post‑conditions, data inputs, and success/failure paths are not identified.  
+                <span class="low">Result: incomplete.</span>
+            </td>
+            <td class="score">3 / 20</td>
+        </tr>
+        <tr>
+            <td>Business Value Alignment</td>
+            <td>
+                The story does not articulate any specific healthcare benefit (e.g., patient safety, regulatory compliance, operational efficiency).  
+                Without a clear value statement, prioritisation is impossible.  
+                <span class="low">Result: low alignment.</span>
+            </td>
+            <td class="score">5 / 20</td>
+        </tr>
+        <tr>
+            <td>Testability</td>
+            <td>
+                Because the functional intent is undefined, QA cannot derive test cases, acceptance tests, or validation rules.  
+                No measurable outcomes are present.  
+                <span class="low">Result: not testable.</span>
+            </td>
+            <td class="score">2 / 20</td>
+        </tr>
+        <tr>
+            <td>Technical Feasibility</td>
+            <td>
+                With no description of the underlying system, data sources, or integration points (e.g., HL7, FHIR, reporting engine), feasibility cannot be assessed.  
+                The story provides no constraints or non‑functional requirements (performance, security, HIPAA compliance).  
+                <span class="low">Result: indeterminate.</span>
+            </td>
+            <td class="score">5 / 20</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Overall Score</h2>
+<p class="score">19 / 100</p>
+
+<h2>Improvement Recommendations</h2>
+<div class="improvement">
+    <h3>1. Clarity</h3>
+    <ul>
+        <li>Identify the primary actor (e.g., “Clinical Administrator”, “Report Analyst”).</li>
+        <li>State the exact action: “generate AHC (Annual Health Compliance) reports”.</li>
+        <li>Explain the desired outcome: “so that stakeholders can review compliance metrics within 24 hours”.</li>
+    </ul>
+
+    <h3>2. Completeness</h3>
+    <ul>
+        <li>Provide explicit Acceptance Criteria, for example:
+            <ul>
+                <li>Report can be generated for a selected date range.</li>
+                <li>Report includes columns X, Y, Z and totals.</li>
+                <li>PDF and CSV export options are available.</li>
+                <li>Only users with the “Report Viewer” role can access the output.</li>
+                <li>Audit log entry is created for each generation.</li>
+            </ul>
+        </li>
+        <li>List any pre‑conditions (e.g., user must be authenticated, data must be loaded for the period).</li>
+    </ul>
+
+    <h3>3. Business Value Alignment</h3>
+    <ul>
+        <li>Connect the report to a concrete business goal: “supports quarterly compliance audit required by the Ministry of Health”.</li>
+        <li>Quantify the benefit where possible (e.g., “reduces manual data‑reconciliation effort by 80 %”).</li>
+    </ul>
+
+    <h3>4. Testability</h3>
+    <ul>
+        <li>Derive test cases from the acceptance criteria (e.g., verify correct data aggregation, verify role‑based access, verify export formats). </li>
+        <li>Define edge‑case scenarios: empty data set, invalid date range, concurrent report generation.</li>
+    </ul>
+
+    <h3>5. Technical Feasibility</h3>
+    <ul>
+        <li>Specify the reporting engine or technology stack (e.g., JasperReports, PowerBI, custom FHIR‑based service). </li>
+        <li>Identify integration points: source systems (EHR, billing), data model (HL7 v2, FHIR Observation). </li>
+        <li>State non‑functional constraints: report must be generated within 30 seconds, must comply with HIPAA encryption at rest and in transit.</li>
+    </ul>
+</div>
+
+<hr>
+<p><em>Prepared by: Senior Business Analyst – Healthcare IT (10+ years experience)</em></p>
+</body>
+</html>
+```</p>
+</body>
+</html>

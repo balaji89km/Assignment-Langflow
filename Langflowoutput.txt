@@ -1,0 +1,95 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Story Review – Ahc Reports</title>
+    <style>
+        body {font-family: Arial, sans-serif; margin: 20px; line-height: 1.5;}
+        h1 {color: #2E3A59;}
+        table {border-collapse: collapse; width: 100%; max-width: 800px;}
+        th, td {border: 1px solid #ccc; padding: 8px; text-align: left;}
+        th {background-color: #f2f2f2;}
+        .score {font-weight: bold; color: #D9534F;}
+        .section {margin-top: 30px;}
+        ul {margin-top: 0;}
+    </style>
+</head>
+<body>
+
+<h1>User Story Review – “Ahc Reports Reports Ahc”</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>Description / Findings</th>
+            <th>Score (out of 20)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Clarity</td>
+            <td>
+                The title and description contain repetitive, undefined terms (“ahc”, “reports”). No clear actor, action, or business goal is expressed, making the story difficult to understand for any stakeholder.
+            </td>
+            <td class="score">5</td>
+        </tr>
+        <tr>
+            <td>Completeness</td>
+            <td>
+                No acceptance criteria, pre‑conditions, or definition of “related functionality” are provided. The story lacks any detail that would allow the team to know when it is done.
+            </td>
+            <td class="score">4</td>
+        </tr>
+        <tr>
+            <td>Business Value Alignment</td>
+            <td>
+                The narrative does not explain *why* the feature matters to patients, clinicians, or the organization. No link to patient safety, compliance (HIPAA/PoPIA), or operational efficiency is evident.
+            </td>
+            <td class="score">6</td>
+        </tr>
+        <tr>
+            <td>Testability</td>
+            <td>
+                Because the functional intent is vague and acceptance criteria are absent, QA cannot derive concrete test cases or success‑criteria.
+            </td>
+            <td class="score">5</td>
+        </tr>
+        <tr>
+            <td>Technical Feasibility</td>
+            <td>
+                Without a defined scope, data flows, or integration points (e.g., EHR, reporting engine), it is impossible to assess feasibility or estimate effort.
+            </td>
+            <td class="score">6</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="section">
+    <h2>Overall Score: <span class="score">26 / 100</span></h2>
+</div>
+
+<div class="section">
+    <h2>Improvement Recommendations</h2>
+    <ul>
+        <li><strong>Rewrite the title and description.</strong> Use the standard “As a [role], I want [capability] so that [benefit]” format. Identify the real actor (e.g., “clinical manager”, “reporting analyst”).</li>
+        <li><strong>Define concrete acceptance criteria.</strong> List measurable conditions (e.g., “Report can be generated for a selected date range”, “Data export complies with HL7‑CDA”, “Access is audited per HIPAA”).</li>
+        <li><strong>Specify pre‑conditions and dependencies.</strong> Indicate required data sources, user permissions, or upstream services.</li>
+        <li><strong>Articulate business value.</strong> Explain how the report improves patient safety, regulatory compliance, or operational efficiency (e.g., “enables quarterly audit of adverse events”).</li>
+        <li><strong>Make the story testable.</strong> From the acceptance criteria, derive at least three test scenarios (positive, negative, security). Include performance expectations if the report is large.</li>
+        <li><strong>Assess technical constraints.</strong> Mention integration points (EHR, data warehouse), expected data volume, and any regulatory encryption requirements.</li>
+        <li><strong>Include non‑functional requirements.</strong> Security (HIPAA‑compliant transmission), availability (report generation < 5 seconds), and audit logging.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Summary</h2>
+    <p>
+        The current user story is too vague to be actionable in a regulated healthcare project. By applying the recommendations above—clarifying the stakeholder, defining explicit acceptance criteria, and linking the work to measurable healthcare outcomes—the story can be transformed into a clear, complete, and testable artifact that supports compliance and reduces re‑work.
+    </p>
+</div>
+
+</body>
+</html>
+```
